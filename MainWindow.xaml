@@ -1,12 +1,66 @@
-﻿<Window x:Class="NewScantron.MainWindow"
+﻿<Window x:Class="ScantronRevived.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:NewScantron"
+        xmlns:local="clr-namespace:ScantronRevived" xmlns:data="clr-namespace:ScantronRevived.Data" d:DataContext="{d:DesignInstance Type=data:UIViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="850">
+        Title="KSU Scantron" Height="800" Width="850">
     <Window.Resources>
+        <Style TargetType="Button" x:Key="YesButton">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Background" Value="#512888"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="Tahoma"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="25" BorderThickness="0" BorderBrush="Transparent" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#512888"/>
+                                <Setter Property="Opacity" Value="0.75"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" Value="0.4"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Button" x:Key="NoButton">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontFamily" Value="Tahoma"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="25" BorderThickness="2" BorderBrush="#512888" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#512888"/>
+                                <Setter Property="Opacity" Value="0.75"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" Value="0.4"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
         <Style TargetType="TabItem">
             <Setter Property="HeaderTemplate">
                 <Setter.Value>
@@ -23,7 +77,7 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsSelected" Value="True">
-                                <Setter TargetName="Border" Property="Background" Value="MediumPurple" />
+                                <Setter TargetName="Border" Property="Background" Value="#512888" />
                             </Trigger>
                             <Trigger Property="IsSelected" Value="False">
                                 <Setter TargetName="Border" Property="Background" Value="White" />
@@ -35,187 +89,236 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid>
-        <TabControl TabStripPlacement="Top" Background="White">
-            <TabItem Header="Start">
-                <Grid>
+    <TabControl x:Name="WindowTabs" TabStripPlacement="Top" Background="White">
+        <TabItem x:Name="StartTab" Header="Start" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="1" HorizontalAlignment="Center" Grid.Column="3">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock HorizontalAlignment="Center" FontFamily="Tahoma" FontSize="30" Text="Please enter the name of the exam:" Margin="5"/>
+                        <TextBox Text="{Binding Path=ExamName, Mode=TwoWay}" x:Name="ExamNameTextBox" Height="30" Width="400" Margin="30" TextChanged="ExamNameTextBox_TextChanged" FontSize="20"/>
+                        <Button Style="{DynamicResource YesButton}"  Click="StartContinueButton_Click" x:Name="StartContinueButton" FontSize="16" Content="Continue" Margin="0,5,0,0" Height="50" Width="175" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+                <Grid Grid.Row="2" Grid.ColumnSpan="4" VerticalAlignment="Bottom">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <GroupBox HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Width="402" Height="600">
-                        <GroupBox.Header>
-                            <TextBlock Text="Welcome to the Scantron program" FontWeight="Bold" FontSize="18" />
-                        </GroupBox.Header>
-                        <StackPanel>
-                            <TextBlock FontSize="16" Text="Step 1:" FontWeight="Bold" Margin="5"/>
-                            <TextBlock FontSize="14" TextWrapping="Wrap" Text="Set your Scantron cards in the tray by following the pictures to the right." Margin="5"/>
-                            <TextBlock FontSize="16" Text="Step 2:" FontWeight="Bold" Margin="5"/>
-                            <TextBlock FontSize="14" Text="Click Reset." Margin="5"/>
-                            <TextBlock FontSize="16" Text="Step 3:" FontWeight="Bold" Margin="5"/>
-                            <TextBlock FontSize="14" TextWrapping="Wrap" Text="Enter the exam name, number of versions, and number of questions." Margin="5"/>
-                            <TextBlock FontSize="16" Text="Step 4:" FontWeight="Bold" Margin="5"/>
-                            <TextBlock FontSize="14" TextWrapping="Wrap" Text="If you want your students to see their responses online, uncheck 'Grading with this program'." Margin="5"/>
-
-                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="5 90 5 5">
-                                <TextBlock FontSize="14" Text="Exam Name:" FontWeight="Bold" Margin="5"/>
-                                <TextBox Height="20" Width="150" Margin="5" TextChanged="TextBox_TextChanged"/>
-                            </StackPanel>
-
-                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="5">
-                                <TextBlock FontSize="14" Text="Number of Versions:" FontWeight="Bold" Margin="5" Height="20"/>
-                                <StackPanel Orientation="Horizontal" Margin="5">
-                                    <TextBox Height="20" Width="25" Margin="5"/>
-                                    <Button Content="▲" Height="20" Width="20" Margin="1"/>
-                                    <Button Content="▼" Height="20" Width="20" Margin="1"/>
-                                </StackPanel>
-                            </StackPanel>
-
-                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="5">
-                                <TextBlock FontSize="14" Text="Number of Questions:" FontWeight="Bold" Margin="5" Height="20"/>
-                                <StackPanel Orientation="Horizontal" Margin="5">
-                                    <TextBox Height="20" Width="25" Margin="5"/>
-                                    <Button Content="▲" Height="20" Width="20" Margin="1"/>
-                                    <Button Content="▼" Height="20" Width="20" Margin="1"/>
-                                </StackPanel>
-                            </StackPanel>
-
-                            <StackPanel Orientation="Horizontal" Margin="5" VerticalAlignment="Center">
-                                <TextBlock FontSize="14" Text="Grade with this program?" FontWeight="Bold" VerticalAlignment="Center" Margin="5"/>
-                                <CheckBox VerticalAlignment="Center" Margin="5"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </GroupBox>
-
-                    <GroupBox HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Width="402" Height="600" Grid.Column="1">
-                        <StackPanel>
-                            <Image Source="C:\Users\enzow\OneDrive\Desktop\PC\Classes\MIS 555\NewScantron\Images\SetupImage1Original.jpg" Width="400" Height="200" Margin="5"/>
-                            <Image Source="C:\Users\enzow\OneDrive\Desktop\PC\Classes\MIS 555\NewScantron\Images\SetupImage2Original.jpg" Width="400" Height="200" Margin="5"/>
-                            <Image Source="C:\Users\enzow\OneDrive\Desktop\PC\Classes\MIS 555\NewScantron\Images\SetupImage3Original.jpg" Width="400" Height="200" Margin="5"/>
-                        </StackPanel>
-                    </GroupBox>
-                    <Grid Grid.ColumnSpan="2" VerticalAlignment="Bottom">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Button FontSize="16" Content="Reset" HorizontalAlignment="Left" Margin="40,18,0,32" Height="50" Width="171" Grid.Column="0"/>
-                        <Button FontSize="16" Content="Continue" HorizontalAlignment="Right" Margin="204,18,20,32" Height="50" Width="175" Grid.Column="1"/>
-                    </Grid>
                 </Grid>
-            </TabItem>
-            <TabItem Header="Scan">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="104*" />
-                        <ColumnDefinition Width="319*"/>
-                        <ColumnDefinition Width="422*" />
-                    </Grid.ColumnDefinitions>
-                    <GroupBox Grid.Column="0" Margin="10,10,10,150" Grid.ColumnSpan="2">
-                        <GroupBox.Header>
-                            <TextBlock Text="Instructions" FontWeight="Bold" FontSize="18"/>
-                        </GroupBox.Header>
-                        <StackPanel>
-                            <TextBlock FontWeight="Bold" FontSize="16" Margin="0,10,0,0" Text="Step 1:"/>
-                            <TextBlock FontSize="14" TextWrapping="Wrap" Text="Click Ready, then press the Start button on the Scantron machine."/>
-                            <TextBlock FontWeight="Bold" FontSize="16" Margin="0,10,0,0" Text="Step 2:"/>
-                            <TextBlock FontSize="14" TextWrapping="Wrap" Text="Once the machine is done scanning, click Done."/>
-                            <TextBlock FontWeight="Bold" FontSize="16" Margin="0,10,0,0" Text="Step 3:"/>
-                            <TextBlock FontSize="14" TextWrapping="Wrap" Text="You can edit WIDs, test versions, and sheet numbers."/>
-                            <TextBlock FontWeight="Bold" FontSize="16" Margin="0,10,0,0" Text="Step 4:"/>
-                            <TextBlock FontSize="14" TextWrapping="Wrap" Text="Click Save Changes. then click Continue."/>
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="PlaceCardsInTrayTab" Visibility="Collapsed">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                <Image UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" Height="300" Margin="0,30,0,0">
+                    <Image.Source>
+                        <BitmapImage DecodePixelWidth="250" UriSource=".\Media\NewScantronImage.jpeg" Rotation="Rotate270"/>
+                    </Image.Source>
+                </Image>
+                <TextBlock Margin="0,30,0,0" HorizontalAlignment="Center" FontSize="20" FontFamily="Tahoma" TextWrapping="Wrap" TextAlignment="Center" Text="Set your Scantron cards in the tray by following the picture above. Please do not load cards past the Maximum line. You will be able to add more later."/>
+                <TextBlock Margin="0,10,0,10" HorizontalAlignment="Center" FontSize="20" FontFamily="Tahoma" TextWrapping="Wrap" Text="Then, press down and release the press to load button pictured at the top of the image."/>
+                <Button Style="{DynamicResource YesButton}"  Click="PlaceCardsInTrayContinueButton_Click" x:Name="PlaceCardsInTrayContinueButton" FontSize="16" Content="Continue" Margin="0,20,0,0" Height="50" Width="175" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </TabItem>
+        <TabItem x:Name="ScanTab" Header="Scan" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center"  Grid.Row="1">
+                    <TextBlock Margin="20" FontSize="20" FontFamily="Tahoma" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Press start on the machine, then click the button to begin scanning"/>
+                    <Button Margin="20" Style="{DynamicResource NoButton}"  Click="ReadyButton_Click" x:Name="ScanTabReadyButton" FontSize="18" Content="Begin Scanning" Height="50" Width="185" HorizontalAlignment="Center"/>
+                    <TextBlock Margin="20" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center" Text="When the machine is no longer making noise, either load more cards and press start on the machine, or click done."/>
+                    <Button Margin="20"  Style="{DynamicResource YesButton}" Click="ScanDoneButton_Click" x:Name="ScanDoneButton" FontSize="18" Content="Done" Height="50" Width="185" HorizontalAlignment="Center" IsEnabled="False"/>
+                </StackPanel>
+
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="AskIfGradingTab" Header="AskIfGrading" Visibility="Collapsed">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock FontSize="30" TextAlignment="Center" Margin="10" TextWrapping="Wrap" HorizontalAlignment="Center" Text="Would you like to input a key or just receive a file with the students answers?"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+                    <Button Style="{DynamicResource YesButton}" Click="UserIsGradingButton_Click" x:Name="UserIsGradingButton" Content="Input Key" Margin="10"/>
+                    <Button Style="{DynamicResource NoButton}" Click="UserIsNotGradingButton_Click" x:Name="UserIsNotGradingButton" Content="Just receive answers" Margin="10"/>
+                </StackPanel>
+            </StackPanel>
+        </TabItem>
+        <TabItem x:Name="GradingQuestionTab" Header="Grade" Visibility="Collapsed">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock HorizontalAlignment="Center" Margin="10" FontSize="30" Text="Would you like to scan a key or input the key manually?"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Style="{DynamicResource YesButton}" Click="GoToScanKeyButton_Click" x:Name="GoToScanKeyButton" Content="Scan a key" Margin="10"/>
+                    <Button Style="{DynamicResource NoButton}" Click="GoToInputKeyManuallyButton_Click" x:Name="GoToInputKeyManuallyButton" Content="Input key manually" Margin="10"/>
+                </StackPanel>
+            </StackPanel>
+        </TabItem>
+        <TabItem x:Name="ScanKeyTab" Header="Grade" Visibility="Collapsed">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                <TextBlock Margin="20" FontSize="20" FontFamily="Tahoma" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Place your key(s) in the tray, push down the load button and release, then press start on the machine. You can scan up to 3 keys, one for each test version."/>
+                <TextBlock Margin="20" FontSize="20" FontFamily="Tahoma" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="Please ensure the key is marked with the correct version in the Test Version field, the same as where a student would mark it."/>
+                <Button Margin="20"  Style="{DynamicResource NoButton}" Click="ScanKeyButton_Click" x:Name="ScanKeyButton" FontSize="18" Content="Scan Key" Height="50" Width="185" HorizontalAlignment="Center"/>
+                <TextBlock Margin="20" FontSize="20" FontFamily="Tahoma" HorizontalAlignment="Center" VerticalAlignment="Center" Text="When the machine is no longer making noise, click done."/>
+                <Button Margin="20" Style="{DynamicResource YesButton}" Click="ScanKeyDoneButton_Click" x:Name="ScanKeyDoneButton" FontSize="18" Content="Done" Height="50" Width="185" HorizontalAlignment="Center" IsEnabled="False"/>
+            </StackPanel>
+        </TabItem>
+        <TabItem x:Name="InputKeyManuallyTab" Header="Grade" Visibility="Collapsed">
+            <StackPanel Orientation="Vertical">
+                <TabControl Height="640">
+                    <TabControl.Resources>
+                        <Style TargetType="StackPanel">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                        </Style>
+                        <Style TargetType="CheckBox">
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                        </Style>
+                    </TabControl.Resources>
+                    <TabItem Header="Version 1" HorizontalAlignment="Center">
+                        <StackPanel Width="800" HorizontalAlignment="Center">
+                            <ListView HorizontalAlignment="Center" Width="800" Height="650" ItemsSource="{Binding Path=AnswerKey[0]}" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="False" BorderBrush="Transparent">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                            <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                                <TextBlock VerticalAlignment="Center" Text="A: "/>
+                                                <CheckBox IsChecked="{Binding Path = Input0, Mode=TwoWay}"/>
+                                            </StackPanel>
+                                            <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                                <TextBlock VerticalAlignment="Center" Text="B: "/>
+                                                <CheckBox IsChecked="{Binding Path = Input1, Mode=TwoWay}"/>
+                                            </StackPanel>
+                                            <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                                <TextBlock VerticalAlignment="Center" Text="C: "/>
+                                                <CheckBox IsChecked="{Binding Path = Input2, Mode=TwoWay}"/>
+                                            </StackPanel>
+                                            <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                                <TextBlock VerticalAlignment="Center" Text="D: "/>
+                                                <CheckBox IsChecked="{Binding Path = Input3, Mode=TwoWay}"/>
+                                            </StackPanel>
+                                            <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                                <TextBlock VerticalAlignment="Center" Text="E: "/>
+                                                <CheckBox IsChecked="{Binding Path = Input4, Mode=TwoWay}"/>
+                                            </StackPanel>
+                                            <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                                <TextBlock VerticalAlignment="Center" Text="Points: "/>
+                                                <local:NumericUpDown x:Name="QuestionPointsUpDown"  Count="{Binding Path = Points, Mode=TwoWay}"/>
+                                            </StackPanel>
+                                            <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                                <TextBlock VerticalAlignment="Center" Text="Partial Credit: "/>
+                                                <CheckBox IsChecked="{Binding Path = PartialCredit, Mode=TwoWay}"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
                         </StackPanel>
-                    </GroupBox>
-                    <GroupBox Grid.Column="2" Margin="10,10,10,150">
-                        <GroupBox.HeaderTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="Scanned Cards" FontWeight="Bold" FontSize="18"/>
-                            </DataTemplate>
-                        </GroupBox.HeaderTemplate>
-                    </GroupBox>
-                    <Grid Grid.Column="0" Grid.ColumnSpan="3" Margin="0,0,0,10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-                        <Button FontSize="18" Content="Ready" Height="50" Width="185" HorizontalAlignment="Center" Margin="-200,661,0,0"/>
-                        <Button FontSize="18" Content="Done" Height="50" Width="185" HorizontalAlignment="Center" Margin="225,661,0,0"/>
-                        <Button FontSize="18" Content="Save Changes" Height="50" Width="185" HorizontalAlignment="Center" Margin="-205,661,0,0" Grid.Column="2"/>
-                        <Button FontSize="18" Content="Continue" Height="50" Width="185" HorizontalAlignment="Center" Margin="235,661,20,0" Grid.Column="2"/>
-                    </Grid>
-                </Grid>
-            </TabItem>
-            <TabItem Header="Answer Key">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="104*" />
-                        <ColumnDefinition Width="319*"/>
-                        <ColumnDefinition Width="422*" />
-                    </Grid.ColumnDefinitions>
-                    <GroupBox Grid.Column="0" Margin="10,10,10,150" Grid.ColumnSpan="2">
-                        <GroupBox.Header>
-                            <TextBlock Text="Instructions" FontWeight="Bold" FontSize="18"/>
-                        </GroupBox.Header>
-                        <StackPanel>
-                            <TextBlock FontWeight="Bold" FontSize="16" Margin="0,10,0,0" Text="Step 1:"/>
-                            <TextBlock FontSize="14" TextWrapping="Wrap" Text="Enter how many points each question is worth and which ones are given partial credit."/>
-                            <TextBlock FontWeight="Bold" FontSize="16" Margin="0,10,0,0" Text="Step 2:"/>
-                            <TextBlock FontSize="14" TextWrapping="Wrap" Text="Create the answer key by scanning in cards with the correct answer for each version, or by checking boxes in the form."/>
-                            <TextBlock FontWeight="Bold" FontSize="16" Margin="0,10,0,0" Text="Step 3:"/>
-                            <TextBlock FontSize="14" TextWrapping="Wrap" Text="Click Create Answer Key. then click Continue."/>
-                        </StackPanel>
-                    </GroupBox>
-                    <GroupBox Grid.Column="2" Margin="10,10,10,150">
-                        <GroupBox.HeaderTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="Key Versions and Answers" FontWeight="Bold" FontSize="18"/>
-                            </DataTemplate>
-                        </GroupBox.HeaderTemplate>
-                    </GroupBox>
-                    <Grid Grid.Column="0" Grid.ColumnSpan="3" Margin="0,0,0,10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-                        <Button FontSize="18" Content="Scan Key" Height="50" Width="185" HorizontalAlignment="Center" Margin="-200,661,0,0"/>
-                        <Button FontSize="18" Content="Done" Height="50" Width="185" HorizontalAlignment="Center" Margin="225,661,0,0"/>
-                        <Button FontSize="18" Content="Create Key" Height="50" Width="185" HorizontalAlignment="Center" Margin="-205,661,0,0" Grid.Column="2"/>
-                        <Button FontSize="18" Content="Continue" Height="50" Width="185" HorizontalAlignment="Center" Margin="235,661,20,0" Grid.Column="2"/>
-                    </Grid>
-                </Grid>
-            </TabItem>
-            <TabItem Header="Grade">
-                <!-- Content for Grade -->
-            </TabItem>
-            <TabItem Header="Finish">
-                <Grid>
-                    <GroupBox Margin="10,10,10,209">
-                        <GroupBox.Header>
-                            <TextBlock Text="Create File" FontWeight="Bold" FontSize="18"/>
-                        </GroupBox.Header>
-                        <StackPanel Height="520">
-                            <TextBlock FontWeight="Bold" FontSize="18" Margin="0,10,0,0">Step 1:</TextBlock>
-                            <TextBlock FontSize="16" TextWrapping="Wrap">Click the Gradebook button if you have graded within this program, otherwise click on one of the Scantron Tool options.</TextBlock>
-
-                            <TextBlock FontWeight="Bold" FontSize="18" Margin="0,20,0,0">Step 2:</TextBlock>
-                            <TextBlock FontSize="16" TextWrapping="Wrap">If your exam has questions that have more than one answer, click the Multiple Answer button. The Single Answer option can only handle 1 answer per question.</TextBlock>
-
-                            <TextBlock FontWeight="Bold" FontSize="18" Margin="0,20,0,0">Step 3:</TextBlock>
-                            <TextBlock FontSize="16" TextWrapping="Wrap">The Gradebook method will give you a .csv file. Go to your course, go to Grade, then click import and select the file to upload it.</TextBlock>
-
-                            <TextBlock FontWeight="Bold" FontSize="18" Margin="0,20,0,0">Step 4:</TextBlock>
-                            <TextBlock FontSize="16" TextWrapping="Wrap">The Canvas Scantrol tool has a separate set of instructions here: https://public.online.k-state.edu/tools/scantron/index.html</TextBlock>
-
-                            <TextBlock FontWeight="Bold" FontSize="18" Margin="0,20,0,0">Step 5:</TextBlock>
-                            <TextBlock FontSize="16" TextWrapping="Wrap">Once you have your file saved, click the Finish button to clear all your data for the next person.</TextBlock>
-
-                            <TextBlock FontWeight="Bold" FontSize="16" TextWrapping="Wrap" Margin="0,40,0,0">If you have any feedback, please email scantron@ksu.edu and we will attempt to incorporate it.</TextBlock>
-                        </StackPanel>
-                    </GroupBox>
-                </Grid>
-            </TabItem>
-        </TabControl>
-    </Grid>
+                    </TabItem>
+                    <TabItem Header="Version 2">
+                        <ListView HorizontalAlignment="Center" Width="800" Height="650" ItemsSource="{Binding Path=AnswerKey[1]}" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="False" BorderBrush="Transparent">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                            <TextBlock VerticalAlignment="Center" Text="A: "/>
+                                            <CheckBox IsChecked="{Binding Path = Input0, Mode=TwoWay}"/>
+                                        </StackPanel>
+                                        <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                            <TextBlock VerticalAlignment="Center" Text="B: "/>
+                                            <CheckBox IsChecked="{Binding Path = Input1, Mode=TwoWay}"/>
+                                        </StackPanel>
+                                        <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                            <TextBlock VerticalAlignment="Center" Text="C: "/>
+                                            <CheckBox IsChecked="{Binding Path = Input2, Mode=TwoWay}"/>
+                                        </StackPanel>
+                                        <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                            <TextBlock VerticalAlignment="Center" Text="D: "/>
+                                            <CheckBox IsChecked="{Binding Path = Input3, Mode=TwoWay}"/>
+                                        </StackPanel>
+                                        <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                            <TextBlock VerticalAlignment="Center" Text="E: "/>
+                                            <CheckBox IsChecked="{Binding Path = Input4, Mode=TwoWay}"/>
+                                        </StackPanel>
+                                        <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                            <TextBlock VerticalAlignment="Center" Text="Points: "/>
+                                            <local:NumericUpDown x:Name="QuestionPointsUpDown"  Count="{Binding Path = Points, Mode=TwoWay}"/>
+                                        </StackPanel>
+                                        <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                            <TextBlock VerticalAlignment="Center" Text="Partial Credit: "/>
+                                            <CheckBox IsChecked="{Binding Path = PartialCredit, Mode=TwoWay}"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </TabItem>
+                    <TabItem Header="Version 3">
+                        <ListView HorizontalAlignment="Center" Width="800" Height="650" ItemsSource="{Binding Path=AnswerKey[2]}" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="False" BorderBrush="Transparent">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                            <TextBlock VerticalAlignment="Center" Text="A: "/>
+                                            <CheckBox IsChecked="{Binding Path = Input0, Mode=TwoWay}"/>
+                                        </StackPanel>
+                                        <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                            <TextBlock VerticalAlignment="Center" Text="B: "/>
+                                            <CheckBox IsChecked="{Binding Path = Input1, Mode=TwoWay}"/>
+                                        </StackPanel>
+                                        <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                            <TextBlock VerticalAlignment="Center" Text="C: "/>
+                                            <CheckBox IsChecked="{Binding Path = Input2, Mode=TwoWay}"/>
+                                        </StackPanel>
+                                        <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                            <TextBlock VerticalAlignment="Center" Text="D: "/>
+                                            <CheckBox IsChecked="{Binding Path = Input3, Mode=TwoWay}"/>
+                                        </StackPanel>
+                                        <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                            <TextBlock VerticalAlignment="Center" Text="E: "/>
+                                            <CheckBox IsChecked="{Binding Path = Input4, Mode=TwoWay}"/>
+                                        </StackPanel>
+                                        <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                            <TextBlock VerticalAlignment="Center" Text="Points: "/>
+                                            <local:NumericUpDown x:Name="QuestionPointsUpDown"  Count="{Binding Path = Points, Mode=TwoWay}"/>
+                                        </StackPanel>
+                                        <StackPanel Margin="10,0,10,0" Orientation="Horizontal">
+                                            <TextBlock VerticalAlignment="Center" Text="Partial Credit: "/>
+                                            <CheckBox IsChecked="{Binding Path = PartialCredit, Mode=TwoWay}"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </TabItem>
+                </TabControl>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+                    <TextBlock VerticalAlignment="Center" FontSize="20" Text="Change all point values: " Margin="10,0,10,0"/>
+                    <local:NumericUpDown Count="{Binding Path=Grader.GlobalPointValue, Mode=TwoWay}" FontSize="15" Margin="0,0,10,0"/>
+                    <TextBlock VerticalAlignment="Center" FontSize="20" Text="Set all to partial credit: " Margin="10,0,10,0"/>
+                    <CheckBox IsChecked="{Binding Path=Grader.GlobalPartialCredit, Mode=TwoWay}" Click="SetAllPartialCreditBox_Click" VerticalAlignment="Center" Margin="0,0,50,0" x:Name="SetAllPartialCreditBox">
+                        <CheckBox.LayoutTransform>
+                            <ScaleTransform ScaleX="1.3" ScaleY="1.5"/>
+                        </CheckBox.LayoutTransform>
+                    </CheckBox>
+                    <Button Click="ResetProgramButton_Click" Style="{DynamicResource NoButton}" Content="Reset Program"/>
+                </StackPanel>
+                <Button Style="{DynamicResource YesButton}" Content="Get Gradebook File" Click="GetGradeBookFromManualInputButton_Click"/>
+            </StackPanel>
+        </TabItem>
+        <TabItem x:Name="FinishTab" Header="Finish" Visibility="Collapsed">
+            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                <TextBlock FontSize="30" Margin="0,0,0,30" HorizontalAlignment="Center" Text="Is your test single or multiple answers per question?"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Style="{DynamicResource YesButton}" Click="SingleAnswerButton_Click" Content="Single Answer"/>
+                    <Button Style="{DynamicResource NoButton}" Click="MultipleAnswerButton_Click" Content="Multiple Answers"/>
+                </StackPanel>
+                <Button Style="{DynamicResource NoButton}" Click="ResetProgramButton_Click" Content="Reset Program" Margin="0,200,0,60"/>
+            </StackPanel>
+        </TabItem>
+    </TabControl>
 </Window>

@@ -1,0 +1,127 @@
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.exe
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.deps.json
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.runtimeconfig.json
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.dll
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.pdb
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived_MarkupCompile.cache
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived_MarkupCompile.lref
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.g.resources
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.AssemblyInfoInputs.cache
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.AssemblyInfo.cs
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.csproj.CoreCompileInputs.cache
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.dll
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\obj\Debug\net6.0-windows\refint\ScantronRevived.dll
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.pdb
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.genruntimeconfig.cache
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\obj\Debug\net6.0-windows\ref\ScantronRevived.dll
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\bin\Debug\net6.0-windows\System.IO.Ports.dll
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\unix\lib\net6.0\System.IO.Ports.dll
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.IO.Ports.dll
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.csproj.AssemblyReference.cache
+C:\Users\addic\source\repos\Scantron Revived\ScantronRevived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.csproj.CopyComplete
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.exe
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.deps.json
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.runtimeconfig.json
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.dll
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.pdb
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\bin\Debug\net6.0-windows\System.IO.Ports.dll
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\bin\Debug\net6.0-windows\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\bin\Debug\net6.0-windows\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\bin\Debug\net6.0-windows\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\bin\Debug\net6.0-windows\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\bin\Debug\net6.0-windows\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\bin\Debug\net6.0-windows\runtimes\unix\lib\net6.0\System.IO.Ports.dll
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.IO.Ports.dll
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.csproj.AssemblyReference.cache
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived_MarkupCompile.cache
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived_MarkupCompile.lref
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.g.resources
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.AssemblyInfoInputs.cache
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.AssemblyInfo.cs
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.csproj.CopyComplete
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.dll
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\refint\ScantronRevived.dll
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.pdb
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.genruntimeconfig.cache
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\ref\ScantronRevived.dll
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.exe
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.deps.json
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.runtimeconfig.json
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.dll
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.pdb
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\System.IO.Ports.dll
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\unix\lib\net6.0\System.IO.Ports.dll
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.IO.Ports.dll
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.csproj.AssemblyReference.cache
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived_MarkupCompile.cache
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived_MarkupCompile.lref
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.g.resources
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.AssemblyInfoInputs.cache
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.AssemblyInfo.cs
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.csproj.CoreCompileInputs.cache
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.csproj.CopyComplete
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.dll
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\refint\ScantronRevived.dll
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.pdb
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.genruntimeconfig.cache
+C:\Users\addic\Documents\GitHub\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ref\ScantronRevived.dll
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.csproj.AssemblyReference.cache
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived_MarkupCompile.cache
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived_MarkupCompile.lref
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.dll
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\refint\ScantronRevived.dll
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.pdb
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.exe
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.deps.json
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.runtimeconfig.json
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.dll
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\ScantronRevived.pdb
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\System.IO.Ports.dll
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\unix\lib\net6.0\System.IO.Ports.dll
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.IO.Ports.dll
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.g.resources
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.AssemblyInfoInputs.cache
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.AssemblyInfo.cs
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.csproj.CoreCompileInputs.cache
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.genruntimeconfig.cache
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ref\ScantronRevived.dll
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\NumericUpDown.g.cs
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\NumericUpDown.baml
+C:\Users\deanb\Desktop\Classes\New Scantron\ScantronRevived\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\NumericUpDown.g.cs
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\deanb\Source\Repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\NumericUpDown.baml
+C:\Users\deanb\source\repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\ScantronRevived.sourcelink.json
+C:\Users\deanb\source\repos\Scantron-Revived\ScantronRevived\obj\Debug\net6.0-windows\Scantron.ABECEFBE.Up2Date

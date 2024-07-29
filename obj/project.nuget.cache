@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "1rrd5slTti1y5N0lYoa5JjchXM8nJyBwHn+ISYtSUwdkICnSx0+F6ShfKkvG3xv1SehcGzRdOWJ6ymPMy5G0yw==",
+  "dgSpecHash": "DPP0Nz4nN/H5AICRBc4SIv2O5lYbz3sLWw/BhMukMTrSkIt7e8ElgwVzlAn0KcWTwaNjY1pVvxxYEHnQfskmaQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\enzow\\OneDrive\\Desktop\\PC\\Classes\\MIS 555\\NewScantron\\NewScantron.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\deanb\\source\\repos\\Scantron-Revived\\ScantronRevived\\ScantronRevived.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\deanb\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\7.0.0\\runtime.linux-arm.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
+    "C:\\Users\\deanb\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\7.0.0\\runtime.linux-arm64.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
+    "C:\\Users\\deanb\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\7.0.0\\runtime.linux-x64.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
+    "C:\\Users\\deanb\\.nuget\\packages\\runtime.native.system.io.ports\\7.0.0\\runtime.native.system.io.ports.7.0.0.nupkg.sha512",
+    "C:\\Users\\deanb\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\7.0.0\\runtime.osx-arm64.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
+    "C:\\Users\\deanb\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\7.0.0\\runtime.osx-x64.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
+    "C:\\Users\\deanb\\.nuget\\packages\\system.io.ports\\7.0.0\\system.io.ports.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
