@@ -1,4 +1,4 @@
-## Scantron Revived
+## New Scantron Program
 
  Remake of old scantron program
  Written by Dean Blickenstaff
